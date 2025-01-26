@@ -39,12 +39,12 @@
 }
 
 .logo {
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-size: var(--header-logo-size);
 }
 
 .header-title {
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-size: var(--header-title-size);
   text-transform: uppercase;
 }
@@ -84,7 +84,7 @@
   z-index: 1;
   inset-block-start: 25px;
   inset-inline-end: var(--label-inset-inline-end);
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-size: 14px;
   text-shadow:
     -1px -1px 0 var(--card-text_shadow-color),
@@ -172,7 +172,7 @@
 .button {
   position: relative;
   background-color: transparent;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-size: 14px;
   line-height: 90%;
   cursor: pointer;
@@ -325,7 +325,7 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy, sans-serif;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
