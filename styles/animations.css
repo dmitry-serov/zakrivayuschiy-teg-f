@@ -11,21 +11,21 @@
 */
 
 @keyframes heart-scale {
-    to {
-        transform: scale(1.25);
-    }
+  to {
+    transform: scale(1.25);
   }
-  
-  @keyframes sparks-visible {
-    to {
-        opacity: 100%;
-    }
-  }
+}
 
-  .like-icon.is-liked .heart {
-    animation: heart-scale 0.3s ease-in 0.1s;
+@keyframes sparks-visible {
+  to {
+    opacity: 100%;
   }
-  
-  .like-icon.is-liked .sparks {
-    animation: sparks-visible 0.3s ease-in 0.3s;
-  }
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-visible 0.3s ease-in 0.3s;
+}

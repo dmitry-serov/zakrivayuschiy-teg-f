@@ -18,7 +18,7 @@
   flex-direction: column;
   align-items: center;
   font-family: var(--base-font), sans-serif;
-  font-variation-settings: "wght" var(--card-content-font-weight);
+  font-variation-settings: 'wght' var(--card-content-font-weight);
   color: var(--accent-color);
   background: var(--background-gradient);
   background-size: cover;
@@ -71,7 +71,7 @@
 .card-title {
   padding-inline: 10px;
   padding-block: 5px;
-  font-variation-settings: "wght" var(--card-title-font-weight);
+  font-variation-settings: 'wght' var(--card-title-font-weight);
   font-size: 18px;
 }
 
@@ -86,22 +86,26 @@
   inset-inline-end: var(--label-inset-inline-end);
   font-family: var(--accent-font), sans-serif;
   font-size: 14px;
-  text-shadow: 
-  -1px -1px 0 var(--card-text_shadow-color),  
-   1px -1px 0 var(--card-text_shadow-color),
-  -1px  1px 0 var(--card-text_shadow-color),
-   1px  1px 0 var(--card-text_shadow-color);
+  text-shadow:
+    -1px -1px 0 var(--card-text_shadow-color),
+    1px -1px 0 var(--card-text_shadow-color),
+    -1px 1px 0 var(--card-text_shadow-color),
+    1px 1px 0 var(--card-text_shadow-color);
   mix-blend-mode: hard-light;
   opacity: 0.5;
 }
 
-@supports((text-stroke: 1px var(--card-text_shadow-color)) or (-webkit-text-stroke: 1px var(--card-text_shadow-color))) {
+@supports (
+  (text-stroke: 1px var(--card-text_shadow-color)) or
+    (-webkit-text-stroke: 1px var(--card-text_shadow-color))
+) {
+  
   .label {
     -webkit-text-stroke: 1px var(--card-text_shadow-color);
     text-stroke: 1px var(--card-text_shadow-color);
     text-shadow: none;
   }
-} 
+}
 
 .card-image {
   inline-size: 100%;
@@ -246,7 +250,6 @@
 .heart:hover .core {
   fill: var(--accent-color);
   transition: fill 0.3s ease-in-out 0.03s;
-  
 }
 
 .heart:hover .main-body {
@@ -310,8 +313,8 @@
 
 .modal-dialog::backdrop {
   background-color: var(--accent-color);
-  opacity: 75%;
-} 
+  opacity: 0.75;
+}
 
 .modal-dialog__message {
   display: flex;
