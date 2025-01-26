@@ -13,4 +13,323 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  padding-block: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--base-font), sans-serif;
+  font-variation-settings: "wght" var(--card-content-font-weight);
+  color: var(--accent-color);
+  background: var(--background-gradient);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  inline-size: var(--content-inline-size);
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-block: var(--header-padding-block);
+  border: 2px solid var(--accent-color);
+  margin-block-end: 100px;
+}
+
+.logo {
+  font-family: var(--accent-font), sans-serif;
+  font-size: var(--header-logo-size);
+}
+
+.header-title {
+  font-family: var(--accent-font), sans-serif;
+  font-size: var(--header-title-size);
+  text-transform: uppercase;
+}
+
+.content {
+  inline-size: var(--content-inline-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.card {
+  border: 2px solid var(--accent-color);
+  background-color: var(--background-color);
+}
+
+.card-title {
+  padding-inline: 10px;
+  padding-block: 5px;
+  font-variation-settings: "wght" var(--card-title-font-weight);
+  font-size: 18px;
+}
+
+.card-image-wrapper {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 25px;
+  inset-inline-end: var(--label-inset-inline-end);
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  text-shadow: 
+  -1px -1px 0 var(--card-text_shadow-color),  
+   1px -1px 0 var(--card-text_shadow-color),
+  -1px  1px 0 var(--card-text_shadow-color),
+   1px  1px 0 var(--card-text_shadow-color);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+}
+
+@supports((text-stroke: 1px var(--card-text_shadow-color)) or (-webkit-text-stroke: 1px var(--card-text_shadow-color))) {
+  .label {
+    -webkit-text-stroke: 1px var(--card-text_shadow-color);
+    text-stroke: 1px var(--card-text_shadow-color);
+    text-shadow: none;
+  }
+} 
+
+.card-image {
+  inline-size: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.inspiration {
+  filter: contrast(120%) hue-rotate(180deg);
+}
+
+.easy {
+  filter: saturate(150%);
+}
+
+.it-worked {
+  filter: blur(2px);
+}
+
+.according-to-plan {
+  filter: opacity(90%) saturate(200%) blur(3px);
+}
+
+.difficult {
+  filter: brightness(50%);
+}
+
+.not-enough-time {
+  filter: sepia(0.8);
+}
+
+.indecision {
+  filter: grayscale(100%);
+}
+
+.animation {
+  filter: invert(90%);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+}
+
+.card-content p {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.buttons-block {
+  align-self: end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.button {
+  position: relative;
+  background-color: transparent;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 90%;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.button:hover::after {
+  transform: scaleX(1);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--background-color);
+}
+
+.card__icon-button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: 2px solid transparent;
+  transition: outline 0.3s ease;
+}
+
+.button:focus,
+.card__icon-button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+}
+
+.card__like-button {
+  min-inline-size: 130px;
+  padding-inline: 17px;
+  padding-block: 11px;
+}
+
+.like-icon {
+  display: block;
+  block-size: 34px;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s ease-in-out 0.05s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s ease-in-out;
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.heart:hover .core {
+  fill: var(--accent-color);
+  transition: fill 0.3s ease-in-out 0.03s;
+  
+}
+
+.heart:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s ease-in-out;
+}
+
+.heart:active .core {
+  fill: red;
+  transition: fill 0.3s ease-in-out 0.03s;
+}
+
+.heart:active .main-body {
+  fill: red;
+  transition: fill 0.3s ease-in-out;
+}
+
+.like-icon.is-liked .core {
+  fill: red;
+  transition: fill 0.3s ease-in-out 0.03s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: red;
+  transition: fill 0.3s ease-in-out;
+}
+
+.like-icon.is-liked .contour {
+  fill: red;
+  transition: fill 0.3s ease-in-out 0.06s;
+}
+
+.save-button {
+  padding-inline: 20px;
+  padding-block: 15px;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: var(--save-button-flex-direction);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-floppy {
+  inline-size: var(--icon-floppy-size);
+  aspect-ratio: 1/1;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.modal-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-inline-size: var(--modal-dialog-max-inline-size);
+  border: 2px solid var(--accent-color);
+  padding-inline: var(--modal-dialog-padding-inline);
+  padding-block: 30px;
+}
+
+.modal-dialog::backdrop {
+  background-color: var(--accent-color);
+  opacity: 75%;
+} 
+
+.modal-dialog__message {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.modal-dialog__message .icon-floppy {
+  flex-shrink: 0;
+  inline-size: 39px;
+}
+
+.modal-dialog-ok-button {
+  padding-block: 12px;
+  padding-inline: 17px;
 }

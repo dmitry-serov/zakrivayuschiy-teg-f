@@ -1,1 +1,38 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --content-inline-size: clamp(23.438rem, 16.285rem + 30.516dvi, 43.75rem);
+    --accent-color: #000;
+    --background-color: #fff;
+    --base-font: 'Inter-Variable';
+    --accent-font: 'PressStart2P-Regular';
+    --card-title-font-weight: 700;
+    --card-content-font-weight: 400;
+    --background-gradient: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to top, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    
+    --header-padding-block: clamp(7.5rem, 7.324rem + 0.751dvi, 8rem);
+    --header-logo-size: clamp(3.063rem, 2.71rem + 1.502dvi, 4.063rem);
+    --header-title-size: clamp(0.875rem, 0.677rem + 0.845dvi, 1.438rem);
+
+    --card-text_shadow-color: #fff;
+    --heart-contour-color: #000;
+    --heart-sparks-color: red;
+    --label-inset-inline-end: 25px;
+    --save-button-flex-direction: row;
+    --icon-floppy-size: 21px;
+    --modal-dialog-padding-inline: 30px;
+    --modal-dialog-max-inline-size: 357px;
+}
+
+@media (width <= 375px) {
+    :root {
+        --content-inline-size: 100%;
+        --label-inset-inline-end: 13px;
+        --save-button-flex-direction: column;
+        --icon-floppy-size: 28px;
+        --modal-dialog-padding-inline: 40px;
+        --modal-dialog-max-inline-size: 341px;
+    }
+}
