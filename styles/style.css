@@ -99,7 +99,7 @@
   (text-stroke: 1px var(--card-text_shadow-color)) or
     (-webkit-text-stroke: 1px var(--card-text_shadow-color))
 ) {
-  
+
   .label {
     -webkit-text-stroke: 1px var(--card-text_shadow-color);
     text-stroke: 1px var(--card-text_shadow-color);
@@ -114,35 +114,39 @@
   object-position: center;
 }
 
-.inspiration {
-  filter: contrast(120%) hue-rotate(180deg);
+.filter-contrast {
+  filter: contrast(120%);
 }
 
-.easy {
+.filter-hue-rotate {
+  filter: hue-rotate(180deg);
+}
+
+.filter-saturate {
   filter: saturate(150%);
 }
 
-.it-worked {
+.filter-blur {
   filter: blur(2px);
 }
 
-.according-to-plan {
-  filter: opacity(90%) saturate(200%) blur(3px);
+.filter-opacity {
+  filter: opacity(90%);
 }
 
-.difficult {
+.filter-brightness {
   filter: brightness(50%);
 }
 
-.not-enough-time {
+.filter-sepia {
   filter: sepia(0.8);
 }
 
-.indecision {
+.filter-grayscale {
   filter: grayscale(100%);
 }
 
-.animation {
+.filter-invert {
   filter: invert(90%);
 }
 
@@ -172,7 +176,7 @@
   font-size: 14px;
   line-height: 90%;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s linear;
 }
 
 .button::after {
@@ -201,7 +205,7 @@
   border: none;
   background-color: transparent;
   outline: 2px solid transparent;
-  transition: outline 0.3s ease;
+  transition: outline 0.3s linear;
 }
 
 .button:focus,
@@ -231,7 +235,7 @@
 
 .core {
   fill: transparent;
-  transition: fill 0.3s ease-in-out 0.05s;
+  transition: fill 0.3s ease-in-out 0.03s;
 }
 
 .main-body {
@@ -249,32 +253,32 @@
 
 .heart:hover .core {
   fill: var(--accent-color);
-  transition: fill 0.3s ease-in-out 0.03s;
+  transition: fill 0.3s ease-in-out;
 }
 
 .heart:hover .main-body {
   fill: var(--accent-color);
-  transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out 0.05s;
 }
 
 .heart:active .core {
   fill: red;
-  transition: fill 0.3s ease-in-out 0.03s;
+  transition: fill 0.3s ease-in-out;
 }
 
 .heart:active .main-body {
   fill: red;
-  transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out 0.05s;
 }
 
 .like-icon.is-liked .core {
   fill: red;
-  transition: fill 0.3s ease-in-out 0.03s;
+  transition: fill 0.3s ease-in-out;
 }
 
 .like-icon.is-liked .main-body {
   fill: red;
-  transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out 0.05s;
 }
 
 .like-icon.is-liked .contour {
